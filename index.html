@@ -7,6 +7,36 @@
   <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@700&display=swap"
+    rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit&family=Young+Serif&display=swap"
+    rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@700&family=Young+Serif&display=swap"
+    rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@700&family=Young+Serif&display=swap"
+    rel="stylesheet">
 
   <title>Frontend Mentor | Recipe page</title>
 
@@ -14,8 +44,9 @@
   <style>
     /* .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); } */
-    body, html {
-      height: 100%;
+    body,
+    html {
+      min-height: 100vh;
       background-color: hsl(30, 54%, 90%);
       display: flex;
       justify-content: center;
@@ -25,11 +56,84 @@
     .container {
       background-color: white;
       width: 40%;
+      border-radius: 20px;
+      padding: 2%;
     }
 
     .card-image {
-      /* display: block; */
+      border-radius: 20px;
       width: 100%;
+      margin-bottom: 4%;
+    }
+
+    .heading,
+    .subheading-ingre,
+    .subheading-instr,
+    .subheading-nutri {
+      font-family: "Young Serif", serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: xx-large;
+      margin-bottom: 3%;
+    }
+
+    .description,
+    .overview,
+    .Ingredients,
+    .instruction,
+    .nutrition {
+      font-family: "Outfit", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-size: small;
+      margin-bottom: 2%;
+      color: hsl(30, 10%, 34%);
+    }
+
+    .overview {
+      background-color: hsl(330, 100%, 98%);
+      padding: 2%;
+    }
+
+    .subheading-prep {
+      color: hsl(332, 51%, 32%);
+    }
+
+    .subheading-ingre,
+    .subheading-instr,
+    .subheading-nutri {
+      color: hsl(14, 45%, 36%);
+      font-size: large;
+      margin-top: 1%;
+      margin-bottom: 1%;
+    }
+
+    hr {
+      color: rgb(255, 255, 255);
+    }
+
+    li {
+      padding: 1%;
+    }
+
+    li::marker {
+      color: hsl(14, 45%, 36%);
+    }
+
+    table tr:not(:first-child) td {
+      border-top: 1px solid hsl(30, 18%, 87%);
+      width: 100%;
+      /* padding: 2%; */
+    }
+
+    table td {
+      padding: 2%;
+    }
+
+    .values {
+      color: hsl(14, 45%, 36%);
+      font-weight: 700;
     }
   </style>
 </head>
@@ -43,11 +147,11 @@
       to perfection, optionally filled with your choice of cheese, vegetables, or meats.
     </div>
     <div class="overview">
-      <div class="subheading-prep">Preparation time</div>
+      <div class="subheading-prep"><b>Preparation time</b></div>
       <ul>
-        <li>Total: Approximately 10 minutes</li>
-        <li>Preparation: 5 minutes</li>
-        <li>Cooking: 5 minutes</li>
+        <li><b>Total:</b> Approximately 10 minutes</li>
+        <li><b>Preparation:</b> 5 minutes</li>
+        <li><b>Cooking:</b> 5 minutes</li>
       </ul>
     </div>
     <div class="Ingredients">
@@ -90,19 +194,23 @@
       <table>
         <tr>
           <td>Calories</td>
-          <td> 277kcal</td>
+          <td class="values"> 277kcal</td>
+          <td></td>
         </tr>
         <tr>
           <td>Carbs</td>
-          <td>0g</td>
+          <td class="values">0g</td>
+          <td></td>
         </tr>
         <tr>
           <td>Protein</td>
-          <td>20g</td>
+          <td class="values">20g</td>
+          <td></td>
         </tr>
         <tr>
           <td>Fat</td>
-          <td>22g</td>
+          <td class="values">22g</td>
+          <td></td>
         </tr>
       </table>
     </div>
