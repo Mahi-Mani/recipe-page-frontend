@@ -18,7 +18,7 @@ I built the recipe page component based on the starter code provided by Frontend
 
 ### Links
 
-- Live Site URL: [Live site URL](https://mahi-mani.github.io/Social-link-profile-static/)
+- Live Site URL: [Live site URL](https://mahi-mani.github.io/recipe-page-frontend/)
 
 ## My process
 
